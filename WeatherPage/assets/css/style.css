@@ -186,4 +186,31 @@ h2.title {
   color: #e7e6fb;
 }
 
-/* Minuto 51:40 */
+/* Sun Time */
+.sun-chart-wrapper {
+  margin-top: 4rem;
+  height: 11rem;
+  position: relative;
+}
+
+.sun-chart {
+  margin: 4rem;
+  width: 21.6rem;
+  height: 21.6rem;
+  border: 1px solid red;
+
+  position: relative;
+}
+
+.sun-chart::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  background: #f6c833;
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+  margin: -0.6rem;
+}

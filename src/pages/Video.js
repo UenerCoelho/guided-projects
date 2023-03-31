@@ -1,5 +1,6 @@
 // O comando 'rcfe' cria um componente auto do react
 import React, { useRef, useState } from "react"
+import VideoFooter from "./components/footer/VideoFooter"
 import "./Video.css"
 
 function Video() {
@@ -17,16 +18,16 @@ function Video() {
   }
   return (
     <div className="video">
-      Video aqui
       <video
         className="video__player"
         ref={videoRef}
         onClick={handleStart}
         loop
-        src="https://firebasestorage.googleapis.com/v0/b/jornada2-eb156.appspot.com/o/ZqU6oFX6.mp4.mp4?alt=media&token=9839e872-2d5e-4da3-9299-17eb2949831d"
-      >
-        Video
-      </video>
+        src="https://privaty.com.br/wp-content/uploads/2023/03/gato-1.mp4"
+      ></video>
+      {/* Side bar */}
+      {/* Footer */}
+      <VideoFooter />
     </div>
   )
 }

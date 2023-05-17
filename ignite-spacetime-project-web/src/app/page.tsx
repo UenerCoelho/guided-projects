@@ -1,7 +1,7 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <h1>Hello World</h1>
+    <div className="text-2xl font-bold uppercase w-20 h-20 bg-gray-600 rounded md-10">
+      oi
+    </div>
   )
 }

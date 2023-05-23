@@ -1,4 +1,4 @@
-<p align="center">
+<p align="space-between">
   <a href="rocketseat.com.br"><img src="https://img.shields.io/static/v1?label=Rocketseat&message=NLW-12&color=313238&labelColor=8257e5" alt="Rocketseat Project Spacetime" /></a>
   <a href="LICENSE"><img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=2b701b&labelColor=2e50af" alt="License"></a>
 </p>

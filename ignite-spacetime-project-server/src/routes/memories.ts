@@ -40,7 +40,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
       },
     })
 
-    if (!memory.userId && memory.userId !== request.user.sub) {
+    if (!memory.isPublic && memory.userId !== request.user.sub) {
       return reply.status(401).send()
     }
 
@@ -93,7 +93,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
       return reply.status(401).send()
     }
 
-    const memory = await prisma.memory.update({
+    memory = await prisma.memory.update({
       where: {
         id,
       },

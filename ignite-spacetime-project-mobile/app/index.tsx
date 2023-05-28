@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import { useEffect } from 'react'
+import { useRouter } from 'expo-router'
 import { ImageBackground, View, Text, TouchableOpacity } from 'react-native'
 import { makeRedirectUri, useAuthRequest } from 'expo-auth-session'
 import { styled } from 'nativewind'
@@ -28,13 +29,15 @@ const discovery = {
 }
 
 export default function App() {
+  const router = useRouter()
+
   const [hasLoadedFonts] = useFonts({
     Roboto_400Regular,
     Roboto_700Bold,
     BaiJamjuree_700Bold,
   })
 
-  const [request, response, signInWithGithub] = useAuthRequest(
+  const [response, signInWithGithub] = useAuthRequest(
     {
       clientId: 'd7a1e30a5c906d74db78',
       scopes: ['identity'],
@@ -45,24 +48,25 @@ export default function App() {
     discovery,
   )
 
+  async function handleGithubOAuthCode(code: string) {
+    const response = await api.post('/register', {
+      code,
+    })
+
+    const { token } = response.data
+
+    await SecureStore.setItemAsync('token', token)
+
+    router.push('/memories')
+  }
+
   useEffect(() => {
     // console.log(response)
 
     if (response?.type === 'success') {
       const { code } = response.params
 
-      api
-        .post('/register', {
-          code,
-        })
-        .then((response) => {
-          const { token } = response.data
-
-          SecureStore.setItemAsync('token', token)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+      handleGithubOAuthCode(code)
     }
   }, [response])
 
@@ -91,12 +95,9 @@ export default function App() {
         </View>
 
         <TouchableOpacity
-          disabled={!request}
           activeOpacity={0.7}
           className="rounded-full bg-green-500 px-5 py-3"
-          onPress={() => {
-            signInWithGithub()
-          }}
+          onPress={() => signInWithGithub()}
         >
           <Text className="font-alt text-sm uppercase text-black">
             Cadastrar Lembrança

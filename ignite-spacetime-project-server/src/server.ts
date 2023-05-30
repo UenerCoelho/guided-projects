@@ -27,4 +27,5 @@ app
   })
   .then(() => {
     console.log('🤞HTTP server running on http://localhost:3333')
+    // Caso dê erro, abra o terminal GitBash e digite respectivamente os comandos "net stop winnat" e "net start winnat"
   })

@@ -16,14 +16,14 @@
   // workbench
   "workbench.editor.enablePreview": false,
   // "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Default Dark Modern",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.enable": false,
-  "prettier.singleQuote": false,
+  "prettier.enable": true,
+  "prettier.singleQuote": true,
   "prettier.tabWidth": 2,
-  "prettier.semi": false,
+  "prettier.semi": true,
 
   // terminal
   "terminal.integrated.fontSize": 12,

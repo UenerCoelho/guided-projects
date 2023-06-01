@@ -6,8 +6,18 @@ import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 import { memoriesRoutes } from './routes/memories'
 import { authRoutes } from './routes/auth'
+import Multipart from '@fastify/multipart'
+import { uploadRoutes } from './routes/upload'
+import { resolve } from 'node:path'
 
 const app = fastify()
+
+app.register(Multipart)
+
+app.register(require('@fastify/static'), {
+  root: resolve(__dirname, '../uploads'),
+  prefix: '/uploads'
+})
 
 app.register(cors, {
   origin: true, // todas URLs de front poderão acessar nosso DB, mas o ideal é colocar o endereços no qual as URLs acessarão.
@@ -18,6 +28,7 @@ app.register(jwt, {
 })
 
 app.register(authRoutes)
+app.register(uploadRoutes)
 app.register(memoriesRoutes)
 
 app

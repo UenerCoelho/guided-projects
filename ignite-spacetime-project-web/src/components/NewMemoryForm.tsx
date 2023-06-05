@@ -2,9 +2,13 @@
 import { Camera } from 'lucide-react'
 import { MediaPicker } from '@/components/MediaPicker'
 import { FormEvent } from 'react'
+import Cookie from 'js-cookie'
 import { api } from '@/lib/api'
+import { useRouter } from 'next/navigation'
 
 export function NewMemoryForm() {
+  const router = useRouter()
+
   async function handleCreateMemory(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
@@ -23,6 +27,8 @@ export function NewMemoryForm() {
       coverUrl = uploadResponse.data.fileUrl
     }
 
+    const token = Cookie.get('token')
+
     await api.post(
       '/memories',
       {
@@ -30,11 +36,14 @@ export function NewMemoryForm() {
         content: formData.get('content'),
         inPublic: formData.get('isPublic'),
       },
-      // {
-      //   // headers:
-      //   //   Authorization:
-      // },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
     )
+
+    router.push('/')
   }
   return (
     <form onSubmit={handleCreateMemory} className="flex flex-1 flex-col gap-2">

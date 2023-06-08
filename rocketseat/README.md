@@ -1,7 +1,7 @@
 # 💻 Guided rocketseat.com.br projects
 
 <p align="right">
-  Feito com 💜 by Rocketseat
+  Feito com 💜 by 
   <a href="https://www.rocketseat.com.br" target="_blank">
     <img src="https://img.shields.io/static/v1?label=Rocketseat&message=NLW-12&color=313238&labelColor=8257e5" alt="Rocketseat Project Spacetime" />
   </a>

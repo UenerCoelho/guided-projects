@@ -11,12 +11,12 @@
   "editor.formatOnPaste": false,
 
   // explorer
-  "explorer.compactFolders": false,
+  // "explorer.compactFolders": false,
 
   // workbench
-  "workbench.editor.enablePreview": false,
+  // "workbench.editor.enablePreview": false,
   // "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Default Dark Modern",
+  // "workbench.colorTheme": "Default Dark Modern",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -33,7 +33,7 @@
   //   }
   // },
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "window.zoomLevel": -1,
+  // "window.zoomLevel": -1,
   "cSpell.words": [
     "jamjuree",
     "Jamjuree",

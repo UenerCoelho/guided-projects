@@ -10,8 +10,12 @@
   /* 
       Change favorite color
       Default: hsl(162, 100%, 40%)
-      Orange: hsl(14, 100%, 65%) - Blue: hsl(210, 100%, 70%)
-      Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)
+      Orange: hsl(14, 100%, 65%)
+      Blue: hsl(210, 100%, 70%)
+      Pink: hsl(356, 100%, 75%)
+      Purple: hsl(250, 100%, 75%)
+      Gray: hsl(0, 0%, 68%)
+
 
       For more colors visit: https://colors.dopely.top/color-pedia
       -> Choose any color 
@@ -20,7 +24,7 @@
   */
 
   --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
+  --first-color: hsl(var(--hue), 100%, 35%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
@@ -304,11 +308,48 @@ svg {
 
 .home__img {
   width: 900px;
+  /* transform: translateY(-120px); */
 }
+
 /*=============== BUTTON ===============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.25);
+}
 
 /*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 2.5rem;
+}
 
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
+
+.about__image {
+  justify-self: center;
+}
+
+.about__blob {
+  width: 320px;
+}
+
+.about__blob path {
+  stroke: var(--first-color);
+}
 /*=============== SKILLS ===============*/
 
 /*=============== SERVICES ===============*/

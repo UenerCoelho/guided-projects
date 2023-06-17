@@ -37,7 +37,7 @@ const blurHeader = () => {
     ? header.classList.add('blur-header')
     : header.classList.remove('blur-header');
 };
-windows.addEventListener('scroll', blurHeader);
+window.addEventListener('scroll', blurHeader);
 
 /*=============== EMAIL JS ===============*/
 

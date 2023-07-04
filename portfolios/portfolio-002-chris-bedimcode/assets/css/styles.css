@@ -624,6 +624,24 @@ body.dark-theme {
 }
 
 /*=============== TESTIMONIAL ===============*/
+.testimonial {
+  position: relative;
+}
+
+.testimonial__content {
+  text-align: center;
+}
+
+.testimonial__description {
+  font-family: var(--title-font);
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial__name {
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+}
 
 /* Swiper class */
 

@@ -61,6 +61,28 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
 })
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form')
+const contactName = document.getElementById('contact-name')
+const contactEmail = document.getElementById('contact-email')
+const contactProject = document.getElementById('contact-project')
+const contactMessage = document.getElementById('contact-message')
+
+const sendEmail = e => {
+  e.preventDefault()
+
+  // Check if the filed has a value
+  if (
+    contactName.value === '' ||
+    contactEmail.value === '' ||
+    contactProject.value === ''
+  ) {
+    // Add and remove color
+    contactMessage.classList.remove('color-blue')
+    contactMessage.classList.add('color-blue')
+  }
+}
+
+contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 

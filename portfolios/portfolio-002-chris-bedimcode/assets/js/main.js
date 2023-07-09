@@ -84,6 +84,8 @@ const sendEmail = e => {
 
 contactForm.addEventListener('submit', sendEmail)
 
+// alterado
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== SHOW SCROLL UP ===============*/

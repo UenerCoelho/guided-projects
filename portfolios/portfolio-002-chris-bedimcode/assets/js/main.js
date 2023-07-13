@@ -91,28 +91,100 @@ const sendEmail = e => {
         '#contact-form',
         'Ab3zP3LU4qFTCvbpT'
       )
-      .then(() => {
-        //  Show message and add color
-        contactMessage.classList.add('color-blue')
-        contactMessage.textContent = 'Message sent ✅'
+      .then(
+        () => {
+          //  Show message and add color
+          contactMessage.classList.add('color-blue')
+          contactMessage.textContent = 'Message sent ✅'
 
-        // Remove message after five seconds
-        setTimeout(() => {
-          contactMessage.textContent = ''
-        }, 5000)
-      })
+          // Remove message after five seconds
+          setTimeout(() => {
+            contactMessage.textContent = ''
+          }, 5000)
+        },
+        error => {
+          alert('OOPS? SOMETHING HAS FAILED...')
+        }
+      )
+
+    // To clear the input field
+    contactName.value = ''
+    contactEmail.value = ''
+    contactProject.value = ''
   }
 }
 
 contactForm.addEventListener('submit', sendEmail)
 
-// alterado
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () => {
+  // const scrollY = window.scrollY
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute('id'),
+      sectionsClass = document.querySelector(`.nav__menu a[href*=${sectionId}]`)
+
+    if (
+      window.scrollY > sectionTop &&
+      window.scrollY <= sectionTop + sectionHeight
+    ) {
+      sectionsClass.classList.add('active-link')
+    } else {
+      sectionsClass.classList.remove('active-link')
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  // When the scroll is higher than 350 viewport hight, add the show-scroll class to the a tag with scrollUp
+  this.scrollY >= 350
+    ? document.getElementById('scroll-up').classList.add('show-scroll')
+    : document.getElementById('scroll-up').classList.remove('show-scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
 
 /*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic ( if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? ' ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+    darkTheme
+  )
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](
+    iconTheme
+  )
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme)
+  themeButton.classList.toggle(iconTheme)
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 

@@ -1,13 +1,15 @@
-# Responsive Portfolio Website Alexa
-## [Watch it on youtube](https://youtu.be/27JtRAI3QO8)
-### Responsive Portfolio Website Alexa
+# 💼 Responsive Mini Portfolio
+## [Watch it on youtube](https://youtu.be/mq0xJxOTiYo)
+### 💼 Responsive Mini Portfolio
 
-- Responsive Personal Portfolio Website Using HTML CSS & JavaScript
-- Smooth scrolling in each section.
+- Responsive mini portfolio website Using HTML CSS & JavaScript
+- Contains animations css.
 - Includes a light and dark mode.
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
+* Original content
+  - https://github.com/bedimcode/responsive-mini-portfolio
 ![preview img](/.github/preview.png)

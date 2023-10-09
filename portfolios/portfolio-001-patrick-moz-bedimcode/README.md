@@ -13,4 +13,6 @@
 
 💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
 
-<img src='/.github/preview.png' />
+<p align='center'>
+  <img src='/.github/preview.png' alt='preview'/>
+</p>

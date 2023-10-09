@@ -10,6 +10,4 @@
 
 💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
-* Original content
-  - https://github.com/bedimcode/responsive-mini-portfolio
-![preview img](/.github/preview.png)
+![preview img](.github/preview.png)

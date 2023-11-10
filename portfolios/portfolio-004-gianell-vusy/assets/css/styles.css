@@ -146,6 +146,21 @@ img {
   margin-bottom: 0.75rem;
 }
 
+.profile__name {
+  font-size: var(--h2-font-size);
+}
+
+.profile__profession {
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.profile__social {
+  display: flex;
+}
+
 /*=============== BUTTONS ===============*/
 
 /*=============== FILTERS TABS ===============*/

@@ -480,3 +480,59 @@ h3.my-profession {
   width: 100%;
   position: relative;
 }
+
+.about .about-content .timeline .timeline-item {
+  position: relative;
+  padding-left: 2.3125rem;
+  padding-bottom: 3.25rem;
+}
+
+.about .about-content .timeline .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.about .about-content .timeline .timeline-item::before {
+  content: '';
+  width: 0.0625rem;
+  position: absolute;
+  height: 100%;
+  left: 0.4375rem;
+  top: 0;
+  background-color: var(--theme-color1);
+}
+
+.about .about-content .timeline .circle-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.9375rem;
+  width: 0.9375rem;
+  border-radius: 50%;
+  background-color: var(--theme-color1);
+}
+
+.about .about-content .timeline .timeline-date {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-black-700);
+}
+
+.about .about-content .timeline .timeline-date .fa {
+  margin-right: 5px;
+}
+
+.about .about-content .timeline .timeline-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
+  text-transform: capitalize;
+  color: var(--text-black-900);
+}
+
+.about .about-content .timeline .timeline-text {
+  line-height: 1.5625rem;
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--text-black-700);
+}

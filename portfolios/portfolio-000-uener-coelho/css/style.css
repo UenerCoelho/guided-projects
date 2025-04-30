@@ -536,3 +536,65 @@ h3.my-profession {
   text-align: justify;
   color: var(--text-black-700);
 }
+/* Services */
+.service .container {
+  padding-bottom: 2.5rem;
+}
+.service .service-item {
+  margin-bottom: 1.875rem;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  /* padding: 0.9375rem; */
+}
+
+.service .service-item .service-item-inner {
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 0.625rem;
+  padding: 1.875rem 0.9375rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service .service-item .service-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.service .service-item .service-item-inner .icon {
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.875rem;
+  text-align: center;
+  /* background-color: green; */
+}
+
+.service .service-item .service-item-inner .icon .fa {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  color: var(--theme-color1);
+}
+
+.service .service-item .service-item-inner:hover .icon {
+  background: var(--theme-color1);
+}
+
+.service .service-item .service-item-inner:hover .icon .fa {
+  font-size: 1.5625rem;
+  color: #ffffff;
+}
+
+.service .service-item .service-item-inner h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-black-900);
+}
+
+.service .service-item .service-item-inner p {
+  line-height: 1.5625rem;
+  font-size: 1rem;
+  color: var(--text-black-700);
+}
